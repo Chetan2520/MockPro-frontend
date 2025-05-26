@@ -32,7 +32,7 @@ const Hero = ({ elem }) => {
         <div className="inline-block animate-fade-in">
           <span className="bg-black/50 backdrop-blur-sm text-blue-400 px-4 py-2 rounded-full text-sm flex items-center gap-2 border border-blue-500/20 shadow-lg shadow-blue-500/10">
             <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-            Live Demo Available
+            Live Demo 
           </span>
         </div>
 
