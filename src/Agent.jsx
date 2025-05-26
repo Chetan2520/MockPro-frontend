@@ -4,6 +4,7 @@ import { initVapi, getVapiInstance } from "./vapi.js";
 import { interviewer, questionsArray } from "./Interviewer.jsx";
 import Navbar from "./Component/Navbar.jsx";
 import robo from "./assets/robo.png"
+import avatar from "./assets/avatar.png"
 const Agent = () => {
   const userName = "You";
   const userId = 123;
@@ -127,7 +128,7 @@ const Agent = () => {
           img={robo}
           isSpeaking={isSpeaking}
         />
-        <ProfileCard name={userName} img="./src/assets/avatar.png" />
+        <ProfileCard name={userName} img={avatar} />
       </div>
 
      {messages.length > 0 && (
