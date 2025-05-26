@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { initVapi, getVapiInstance } from "./vapi.js";
 import { interviewer, questionsArray } from "./Interviewer.jsx";
 import Navbar from "./Component/Navbar.jsx";
-
+import robo from "./assets/robo.png"
 const Agent = () => {
   const userName = "You";
   const userId = 123;
@@ -124,7 +124,7 @@ const Agent = () => {
       
         <ProfileCard
           name="AI Interviewer"
-          img="./src/assets/robo.png"
+          img={robo}
           isSpeaking={isSpeaking}
         />
         <ProfileCard name={userName} img="./src/assets/avatar.png" />
