@@ -18,7 +18,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 const App = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black">
       <Routes>
         <Route
           path="/"

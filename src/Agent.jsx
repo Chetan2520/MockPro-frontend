@@ -150,7 +150,6 @@ const Agent = () => {
   </div>
 )}
 
-
       <div className="w-full flex flex-wrap justify-center gap-4 mt-6">
         {renderCallButton()}
       </div>
