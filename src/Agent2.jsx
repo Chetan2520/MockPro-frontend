@@ -114,7 +114,7 @@ const Agent2 = () => {
       <>
        
         <button onClick={handleCall} className="btn rounded-lg text-green-600 font-semibold border border-green-500 px-5 py-3">
-          {isIdle ? "Schedule Interview" : "starting..."}
+          {isIdle ? "Start Interview" : "Preparing Your Interview..."}
         </button>
 
 
@@ -136,7 +136,7 @@ const Agent2 = () => {
       </div>
 
        {messages.length > 0 && (
-  <div className="w-full max-w-4xl mt-10 mx-auto my-4 p-4 overflow-y-auto dark-scrollbar   rounded-xl shadow-sm bg-black h-96">
+  <div className="w-full max-w-4xl mt-10 mx-auto my-4 p-4 overflow-y-auto dark-scrollbar   rounded-xl shadow-sm bg-black">
     <div className="space-y-4 text-sm">
       {messages.length > 0 && (
   <div className="w-full max-w-2xl mt-10 mx-auto p-6 bg-zinc-900 rounded-xl shadow-md border border-zinc-800">
