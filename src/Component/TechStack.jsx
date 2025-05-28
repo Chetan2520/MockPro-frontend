@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+
 const techStack = [
   {
     name: "React",
@@ -48,22 +49,13 @@ const techStack = [
     category: "Frontend"
   },
   {
-    name: "OpenAI",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
+    name: "Google Gemini",
+    logo: "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/gemini-color.png",
     color: "from-emerald-400/20 to-teal-500/20",
     glow: "hover:shadow-[0_0_30px_rgba(16,163,127,0.3)]",
     border: "border-emerald-500/30",
     description: "Advanced AI for intelligent interview simulations",
     category: "AI"
-  },
-  {
-    name: "WebSocket",
-    logo: "/src/assets/websocket.png",
-    color: "from-violet-400/20 to-purple-500/20",
-    glow: "hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]",
-    border: "border-violet-500/30",
-    description: "Real-time bidirectional communication for live interviews",
-    category: "Backend"
   }
 ];
 

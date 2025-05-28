@@ -55,14 +55,14 @@ const Hero = () => {
              
               <MagneticButton color="#22C55E" showArrow={false}>
                <Link
-                to="/interview" 
+                to="/schedule" 
               >
                 Start Interview
               </Link>
                </MagneticButton>
              
               <MagneticButton color="#3B82F6" showArrow={false}>
-  <Link to="/schedule" className="flex items-center gap-2">
+  <Link to="/interview" className="flex items-center gap-2">
     <svg
       className="w-6 h-6"
       fill="none"
