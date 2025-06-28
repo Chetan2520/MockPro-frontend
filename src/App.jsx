@@ -16,6 +16,8 @@ import Agent2 from "./Agent2";
 import Agent from "./Agent";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import ScheduleInterviewForm from "./Component/ScheduleInterviewForm";
+import SchedulePage from "./Component/SchedulePage";
 const App = () => {
   return (
     <div className="min-h-screen bg-black">
@@ -41,7 +43,7 @@ const App = () => {
           }
         />
         <Route path="/interview" element={<Agent />} />
-        <Route path="/schedule" element={<Agent2 />} />
+        <Route path="/form" element={<ScheduleInterviewForm/>} />
         <Route path="/register" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>

@@ -87,7 +87,7 @@ const Agent2 = () => {
         userid: userId,
         type: interviewType,
         interviewId,
-        questions, // question vapi ke through database me save ho rha hai hame database se question nikalna padega
+        questions, // question ai ke through database me save ho rha hai hame database se question nikalna padega
       },
     });
   };
