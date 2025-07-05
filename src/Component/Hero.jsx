@@ -55,7 +55,7 @@ const Hero = () => {
              
               <MagneticButton color="#22C55E" showArrow={false}>
                <Link
-                to="/schedule" 
+                to="/interview" 
               >
                 Start Interview
               </Link>

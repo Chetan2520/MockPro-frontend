@@ -85,14 +85,14 @@ const ScheduleInterviewForm = () => {
   };
 
   return (
-    <div className="h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
+    <div className="lg:h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
       {/* Enhanced Background Effects - Removed white elements */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs - darker tones */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-gray-800 to-gray-900 opacity-20 rounded-full blur-3xl animate-pulse"></div>
+        {/* <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-gray-800 to-gray-900 opacity-20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-gray-900 to-black opacity-15 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-gray-700 to-gray-800 opacity-10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        
+         */}
         {/* Floating particles - darker colors */}
         <div className="absolute top-20 left-10 w-2 h-2 bg-gray-600 opacity-20 rounded-full animate-bounce delay-100"></div>
         <div className="absolute top-40 right-20 w-1 h-1 bg-gray-700 opacity-25 rounded-full animate-bounce delay-300"></div>
@@ -291,11 +291,11 @@ const ScheduleInterviewForm = () => {
                   type="button"
                   onClick={handleSubmit}
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 disabled:from-gray-600 disabled:to-gray-700 text-gray-100 font-bold py-3 px-6 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] disabled:hover:scale-100 transition-all duration-200 flex items-center justify-center space-x-3"
+                  className="w-full bg-gradient-to-r from-green-700 to-green-800 hover:from-green-600 hover:to-green-700 disabled:from-green-600 disabled:to-green-700 text-green-100 font-bold py-3 px-6 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] disabled:hover:scale-100 transition-all duration-200 flex items-center justify-center space-x-3"
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-gray-300/30 border-t-gray-300 rounded-full animate-spin"></div>
+                      <div className="w-5 h-5 border-2 border-green-300/30 border-t-green-300 rounded-full animate-spin"></div>
                       <span>Scheduling Interview...</span>
                     </>
                   ) : (
@@ -308,16 +308,16 @@ const ScheduleInterviewForm = () => {
               </div>
 
               {/* Enhanced Go Home Button */}
-              <div className="pt-4 border-t border-gray-700/50">
+              <div className="pt-4 border-t border-green-700/50">
                 <button
                   onClick={handleBackHome}
                   className="group flex items-center justify-center space-x-3 w-full bg-gray-800/50 hover:bg-gray-700/50 border border-gray-600/50 hover:border-gray-500/50 text-gray-100 font-medium py-2.5 px-6 rounded-2xl transition-all duration-200 hover:scale-[1.02]"
                 >
-                  <div className="flex items-center justify-center w-7 h-7 bg-gradient-to-r from-gray-600 to-gray-700 rounded-full group-hover:scale-110 transition-transform">
-                    <Home className="w-3.5 h-3.5" />
+                  <div className="flex items-center border border-green-600 justify-center w-7 h-7 bg-gradient-to-r from-gray-600 to-gray-700 rounded-full group-hover:scale-110 transition-transform">
+                    <Home className="w-3.5 h-3.5 " />
                   </div>
-                  <span>Back to Home</span>
-                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                  <span >Back to Home</span>
+                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform " />
                 </button>
               </div>
 
