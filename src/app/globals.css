@@ -143,4 +143,33 @@ html {
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 0.375rem;
   z-index: -1;
+}
+
+/* Animated, glowing, moving gradient border */
+@keyframes animated-border {
+  0% {
+    border-image-source: linear-gradient(90deg, #348efc, #d7d2e7, #ed1585, #60a5fa);
+  }
+  25% {
+    border-image-source: linear-gradient(120deg, #a78bfa, #ed1585, #60a5fa, #348efc);
+  }
+  50% {
+    border-image-source: linear-gradient(180deg, #f472b6, #60a5fa, #a78bfa, #ed1585);
+  }
+  75% {
+    border-image-source: linear-gradient(240deg, #60a5fa, #a78bfa, #ed1585, #348efc);
+  }
+  100% {
+    border-image-source: linear-gradient(360deg, #60a5fa, #a78bfa, #ed1585, #348efc);
+  }
+}
+
+.animated-glow-border {
+  border-width: 2.5px;
+  border-style: solid;
+  border-radius: 9999px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6, #60a5fa);
+  animation: animated-border 4s linear infinite;
+  box-shadow: 0 0 16px 2px #60a5fa44, 0 0 32px 4px #a78bfa33;
 } 

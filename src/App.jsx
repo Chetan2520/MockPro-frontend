@@ -45,8 +45,9 @@ const App = () => {
         />
         {/* <Route path="/interview" element={<Agent />} /> */}
         <Route path="/interview" element={<Agent2 />} />
-        <Route path="/form" element={<ScheduleInterviewForm/>} />        
-        <Route path="/past-interview" element={<PastInterview/>} />        
+        <Route path="/form" element={<ScheduleInterviewForm/>} />     
+          
+        <Route path="/past-interviews" element={<PastInterview/>} />        
         <Route path="/register" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>

@@ -12,6 +12,7 @@ import {
   Users,
   Zap,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ScheduleInterviewForm = () => {
   const [formData, setFormData] = useState({
@@ -52,7 +53,7 @@ const ScheduleInterviewForm = () => {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("https://mock-pro-frontend.vercel.app/user/scheduleInterview", {
+      const res = await fetch("http://localhost:5000/user/scheduleInterview", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -137,13 +138,19 @@ const ScheduleInterviewForm = () => {
         </div>
 
         {/* Main Content */}
-        <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-8 items-center">
+        <div className="max-w-6xl w-full  grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Side - Hero Section */}
-          <div className="space-y-8 text-white lg:pr-8">
+          <div className="space-y-8  text-white lg:pr-8">
             <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-gray-800/50 backdrop-blur-lg rounded-full border border-gray-600/50">
-                <Clock className="w-4 h-4 mr-2 text-gray-300" />
-                <span className="text-sm font-medium text-gray-200">Quick & Easy Scheduling</span>
+              <div className="inline-flex   items-center px-4 py-2  backdrop-blur-lg ">
+                <Link
+                  to="/past-interviews"
+                  className="animated-glow-border flex items-center gap-2    text-blue-200 font-bold px-10 py-3 rounded-full shadow-xl  transition-all duration-200"
+                  style={{ textShadow: '0 2px 8px #60a5fa55' }}
+                >
+                  <Clock className="w-5 h-5 text-blue-300" />
+                  <span>View Past Interviews</span>
+                </Link>
               </div>
               
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
@@ -309,7 +316,8 @@ const ScheduleInterviewForm = () => {
 
               {/* Enhanced Go Home Button */}
               <div className="pt-4 border-t border-green-700/50">
-                <button
+                <Link
+                to="/"
                   onClick={handleBackHome}
                   className="group flex items-center justify-center space-x-3 w-full bg-gray-800/50 hover:bg-gray-700/50 border border-gray-600/50 hover:border-gray-500/50 text-gray-100 font-medium py-2.5 px-6 rounded-2xl transition-all duration-200 hover:scale-[1.02]"
                 >
@@ -318,7 +326,7 @@ const ScheduleInterviewForm = () => {
                   </div>
                   <span >Back to Home</span>
                   <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform " />
-                </button>
+                </Link>
               </div>
 
              

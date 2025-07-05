@@ -6,6 +6,8 @@ import Navbar from "./Component/Navbar.jsx";
 import MagneticButton from "./Component/MagneticButton.jsx";
 import robo from "./assets/robo.png"
 import avatar from "./assets/avatar.png"
+import { Link } from "react-router-dom";
+import { Clock } from "lucide-react";
 const Agent2 = () => {
   const userName = "You";
   const userId = 123;
@@ -104,7 +106,7 @@ const Agent2 = () => {
       return (
         <button
           onClick={handleDisconnect}
-          className="btn text-red-500 rounded-lg font-semibold px-8 border border-red-500 py-2"
+          className="btn text-red-500 rounded-lg font-semibold px-12  border border-red-600 py-1"
         >
           End
         </button>
@@ -113,7 +115,7 @@ const Agent2 = () => {
     return (
       <>
        
-        <button onClick={handleCall} className="btn rounded-lg text-green-600 font-semibold border border-green-500 px-5 py-3">
+        <button onClick={handleCall} className="btn rounded-lg text-green-600 font-semibold border border-green-500 px-5 py-2">
           {isIdle ? "Start Interview" : "Preparing Your Interview..."}
         </button>
 
@@ -125,6 +127,8 @@ const Agent2 = () => {
   return (
     <>
      <Navbar/>
+     
+     
       <div className="flex flex-col items-center justify-center gap-6 py-8 px-4  md:flex-row">
         <ProfileCard
        
@@ -159,7 +163,18 @@ const Agent2 = () => {
 
       <div className="w-full flex flex-wrap justify-center gap-4 mt-6">
         {renderCallButton()}
+        <div className="inline-flex   items-center px-4 py-2  backdrop-blur-lg ">
+                <Link
+                  to="/past-interviews"
+                  className="animated-glow-border flex items-center gap-2    text-blue-200 font-bold px-10 py-3 rounded-full shadow-xl  transition-all duration-200"
+                  style={{ textShadow: '0 2px 8px #60a5fa55' }}
+                >
+                  <Clock className="w-5 h-5 text-blue-300" />
+                  <span>View Past Interviews</span>
+                </Link>
+              </div>
       </div>
+      
     </>
   );
 };
