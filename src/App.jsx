@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "./Component/Navbar";
 import Hero from "./Component/Hero";
-import SocialProof from "./Component/SocialProof";
 import Features from "./Component/Features";
 import HowItWorks from "./Component/HowItWorks";
 import TechStack from "./Component/TechStack";
@@ -11,7 +10,7 @@ import FAQ from "./Component/FAQ";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./Component/Footer";
 import Testimonials from "./Component/Testimonials";
-import Dashboard from "./Component/Dashboard";
+
 import Agent2 from "./Agent2";
 import Agent from "./Agent";
 import Signup from "./pages/Signup";
@@ -19,6 +18,7 @@ import Login from "./pages/Login";
 import ScheduleInterviewForm from "./Component/ScheduleInterviewForm";
 import SchedulePage from "./Component/SchedulePage";
 import PastInterview from "./Component/PastInterview";
+import Dash from "./pages/Dash";
 const App = () => {
   return (
     <div className="min-h-screen bg-black">
@@ -46,6 +46,7 @@ const App = () => {
         {/* <Route path="/interview" element={<Agent />} /> */}
         <Route path="/interview" element={<Agent2 />} />
         <Route path="/form" element={<ScheduleInterviewForm/>} />     
+        <Route path="/dashboard" element={<Dash/>} />     
           
         <Route path="/past-interviews" element={<PastInterview/>} />        
         <Route path="/register" element={<Signup />} />

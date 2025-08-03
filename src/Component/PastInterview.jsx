@@ -11,9 +11,10 @@ const PastInterview = () => {
   
 
   useEffect(() => { 
-    axios.get("https://mock-pro-frontend.vercel.app/user/scheduled-data").then((res) => {
+    axios.get("http://localhost:5000/user/scheduled-data").then((res) => {
       
       let response = res.data.data;
+      console.log(response)
       
       setPastInterviews(response);
       
