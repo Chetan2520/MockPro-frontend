@@ -53,7 +53,7 @@ const ScheduleInterviewForm = () => {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("http://localhost:5000/user/scheduleInterview", {
+      const res = await fetch("https://mockpro-backend.onrender.com/user/scheduleInterview", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
