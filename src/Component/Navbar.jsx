@@ -6,8 +6,8 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="p-5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="pt-10 px-9">
+      <div className="  sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo & Toggle */}
           <div className="flex items-center">
@@ -43,16 +43,56 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
-            {["Home", "About", "Services", "Contact"].map((item) => (
+            {/* {["Home", "Interview", "Past Interview", "Schedule Interview","Your Stats"].map((item) => (
               <Link
                 key={item}
                 to={`/${item.toLowerCase()}`}
-                className="text-gray-300  px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 relative group"
+                className="text-gray-300  px-3 py-2 rounded-md text-md font-medium transition-colors duration-300 relative group"
               >
                 {item}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
-            ))}
+            ))} */}
+            <Link
+              
+                to="/"
+                className="text-gray-300  px-3 py-2 rounded-md text-md font-medium transition-colors duration-300 relative group"
+              >
+                Home
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link
+              
+              to="/interview"
+              className="text-gray-300  px-3 py-2 rounded-md text-md font-medium transition-colors duration-300 relative group"
+            >
+              Interview
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link
+              
+              to="/past-interviews"
+              className="text-gray-300  px-3 py-2 rounded-md text-md font-medium transition-colors duration-300 relative group"
+            >
+              Past Interview
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link
+              
+              to="/form"
+              className="text-gray-300  px-3 py-2 rounded-md text-md font-medium transition-colors duration-300 relative group"
+            >
+              Schedule Interview
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link
+              
+              to="/dashboard"
+              className="text-gray-300  px-3 py-2 rounded-md text-md font-medium transition-colors duration-300 relative group"
+            >
+              Your Stats
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </div>
 
           {/* Desktop Buttons */}
@@ -83,7 +123,7 @@ const Navbar = () => {
           }`}
         >
           <div className="px-2 pt-2 pb-3 space-y-2">
-            {["Home", "About", "Services", "Contact"].map((item) => (
+            {/* {["Home", "Interview", "Past Interview", "Schedule Interview","Your Stats"].map((item) => (
               <Link
                 key={item}
                 to={`/${item.toLowerCase()}`}
@@ -91,18 +131,53 @@ const Navbar = () => {
               >
                 {item}
               </Link>
-            ))}
+            ))} */}
+            <Link
+                
+                to="/"
+                className="block text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-base font-medium"
+              >
+                Home
+              </Link>
+              <Link
+                
+                to="/interview"
+                className="block text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-base font-medium"
+              >
+                Interview
+              </Link>
+              <Link
+                
+                to="/past-interview"
+                className="block text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-base font-medium"
+              >
+                Past Interview
+              </Link>
+              <Link
+                
+                to="/form"
+                className="block text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-base font-medium"
+              >
+                Schedule Interview
+              </Link>
+              <Link
+                
+                to="/dashboard"
+                className="block text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-base font-medium"
+              >
+                Your Stats
+              </Link>
 
             {/* Mobile Buttons */}
             <Link
               to="/login"
-              className="block text-green-600 hover:text-cyan-400 px-3 py-2 rounded-md text-base font-medium"
+              className="block text-green-600  px-3 py-2 rounded-md text-base font-medium"
             >
               Login
             </Link>
             <Link
               to="/register"
-              className="block text-red-700 hover:text-cyan-400 px-3 py-2 rounded-md text-base font-medium"
+              className="block text-red-700  px-3 py-2 rounded-md text-base font-medium"
             >
               Signup
             </Link>

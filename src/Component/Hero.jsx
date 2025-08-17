@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-black min-h-screen pt-5 relative overflow-hidden">
+    <div className="bg-black min-h-screen pt-5 px-16 relative overflow-hidden">
       {/* Background gradients and orbs */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-black to-black opacity-90"></div>
@@ -28,12 +28,12 @@ const Hero = () => {
       {/* Content */}
       <div className="max-w-screen relative z-10 px-4 sm:px-10">
         {/* Live Demo Badge */}
-        <div className="inline-block animate-fade-in">
+        {/* <div className="inline-block animate-fade-in">
           <span className="bg-black/50 backdrop-blur-sm text-blue-400 px-4 py-2 rounded-full text-sm flex items-center gap-2 border border-blue-500/20 shadow-lg shadow-blue-500/10">
             <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
             Live Demo Available
           </span>
-        </div>
+        </div> */}
 
         {/* Main Layout */}
         <div className="mt-8 flex flex-col lg:flex-row justify-between items-center gap-10 flex-wrap">

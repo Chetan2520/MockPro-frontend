@@ -43,7 +43,6 @@ const App = () => {
             </>
           }
         />
-        {/* <Route path="/interview" element={<Agent />} /> */}
         <Route path="/interview" element={<Agent2 />} />
         <Route path="/form" element={<ScheduleInterviewForm/>} />     
         <Route path="/dashboard" element={<Dash/>} />     

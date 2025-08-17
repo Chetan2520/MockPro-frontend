@@ -6,10 +6,10 @@ const Footer = () => {
 
   const footerLinks = {
     company: [
-      { name: 'About Us', href: '#' },
-      { name: 'Careers', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Press', href: '#' }
+      { name: 'Interview', href: '/interview' },
+      { name: 'Past Interview', href: '/past-interview' },
+      { name: 'Schedule Interview', href: '/form' },
+      { name: 'View Stats', href: '/dashboard' }
     ],
     resources: [
       { name: 'Documentation', href: '#' },
