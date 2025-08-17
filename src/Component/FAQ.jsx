@@ -6,29 +6,29 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "How do I become an interviewer on MockPro?",
-      answer: "To become an interviewer, simply sign up with your professional credentials, complete our verification process, and set up your availability. We'll review your application within 24-48 hours.",
+      question: "What is the MockPro Dashboard?",
+      answer: "The MockPro Dashboard is your central hub where you can track interview progress, access insights, and manage all your mock interview sessions seamlessly.",
+      icon: "📊"
+    },
+    {
+      question: "Can I see my performance analytics?",
+      answer: "Yes! The dashboard provides detailed analytics, including strengths, weak areas, and performance trends to help you focus on targeted improvement.",
+      icon: "📈"
+    },
+    {
+      question: "Does MockPro provide personalized recommendations?",
+      answer: "Absolutely. Based on your performance and interview history, MockPro suggests tailored resources and practice sessions for maximum growth.",
       icon: "🎯"
     },
     {
-      question: "What are the requirements to be an interviewer?",
-      answer: "We require at least 3 years of professional experience in your field, strong communication skills, and a passion for mentoring others. Technical interviewers should have relevant industry experience.",
-      icon: "📋"
+      question: "Is my progress saved automatically?",
+      answer: "Yes, every practice session and feedback is securely saved in your dashboard. You can revisit your past sessions anytime to track your journey.",
+      icon: "💾"
     },
     {
-      question: "How flexible is the scheduling?",
-      answer: "You have complete control over your schedule. Set your available time slots, and candidates can book interviews based on your availability. You can modify your schedule anytime.",
-      icon: "⏰"
-    },
-    {
-      question: "What kind of support do interviewers receive?",
-      answer: "We provide comprehensive training materials, interview guidelines, and a dedicated support team. You'll also have access to our community of experienced interviewers for guidance.",
+      question: "How does MockPro support candidates?",
+      answer: "MockPro offers AI-powered feedback, structured interview simulations, and expert-backed resources to make your preparation smarter and more effective.",
       icon: "🤝"
-    },
-    {
-      question: "How are interviewers compensated?",
-      answer: "Interviewers are paid per interview conducted, with rates varying based on experience and interview type. Payments are processed weekly through secure payment methods.",
-      icon: "💰"
     }
   ];
 
@@ -99,7 +99,7 @@ const FAQ = () => {
             Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Questions</span>
           </h2>
           <p className="text-xl text-gray-400">
-            Everything you need to know about becoming an interviewer on MockPro
+            Everything you need to know about MockPro Dashboard & Features
           </p>
         </motion.div>
 
@@ -169,4 +169,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ; 
+export default FAQ;
