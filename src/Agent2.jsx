@@ -83,8 +83,7 @@ const Agent2 = () => {
   const handleCall = async () => {
     setCallStatus("CONNECTING");
     const vapi = getVapiInstance();
-    // await vapi.start("17121f31-ae34-4f4b-b372-11f850d960f7", {
-      await vapi.start("568daab2-0f22-46ed-8d91-ccad60b7f864", {
+    await vapi.start("17121f31-ae34-4f4b-b372-11f850d960f7", {
       variableValues: {
         username: userName,
         userid: userId,
