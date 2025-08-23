@@ -96,7 +96,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* <div className="hidden md:flex items-center space-x-4">
             <MagneticButton color="#22C55E" showArrow={false}>
               <Link
                 to="/login"
@@ -113,7 +113,7 @@ const Navbar = () => {
                 Signup
               </Link>
             </MagneticButton>
-          </div>
+          </div> */}
         </div>
 
         {/* Mobile Nav */}
@@ -123,15 +123,7 @@ const Navbar = () => {
           }`}
         >
           <div className="px-2 pt-2 pb-3 space-y-2">
-            {/* {["Home", "Interview", "Past Interview", "Schedule Interview","Your Stats"].map((item) => (
-              <Link
-                key={item}
-                to={`/${item.toLowerCase()}`}
-                className="block text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-base font-medium"
-              >
-                {item}
-              </Link>
-            ))} */}
+        
             <Link
                 
                 to="/"
@@ -169,7 +161,7 @@ const Navbar = () => {
               </Link>
 
             {/* Mobile Buttons */}
-            <Link
+            {/* <Link
               to="/login"
               className="block text-green-600  px-3 py-2 rounded-md text-base font-medium"
             >
@@ -180,7 +172,7 @@ const Navbar = () => {
               className="block text-red-700  px-3 py-2 rounded-md text-base font-medium"
             >
               Signup
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
