@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MagneticButton from "./MagneticButton";
+import { useAuth } from "../context/AuthContext";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, logout } = useAuth();
 
   return (
     <nav className="pt-10 px-9">
@@ -43,16 +45,7 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
-            {/* {["Home", "Interview", "Past Interview", "Schedule Interview","Your Stats"].map((item) => (
-              <Link
-                key={item}
-                to={`/${item.toLowerCase()}`}
-                className="text-gray-300  px-3 py-2 rounded-md text-md font-medium transition-colors duration-300 relative group"
-              >
-                {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            ))} */}
+          
             <Link
               
                 to="/"
@@ -96,24 +89,40 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Buttons */}
-          {/* <div className="hidden md:flex items-center space-x-4">
-            <MagneticButton color="#22C55E" showArrow={false}>
-              <Link
-                to="/login"
-                className="text-green-600 px-3 py-1 rounded-md text-sm font-medium relative group"
-              >
-                Login
-              </Link>
-            </MagneticButton>
-            <MagneticButton color="#EF4444" showArrow={false}>
-              <Link
-                to="/register"
-                className="text-red-700 px-3 py-1 rounded-md text-sm font-medium relative group"
-              >
-                Signup
-              </Link>
-            </MagneticButton>
-          </div> */}
+           <div className="hidden md:flex items-center space-x-4">
+            {user ? (
+              <>
+                                 <span className="text-gray-300 text-sm">Welcome, {user.username}</span>
+                <MagneticButton color="#EF4444" showArrow={false}>
+                  <button
+                    onClick={logout}
+                    className="text-red-700 px-3 py-1 rounded-md text-sm font-medium relative group"
+                  >
+                    Logout
+                  </button>
+                </MagneticButton>
+              </>
+            ) : (
+              <>
+                <MagneticButton color="#22C55E" showArrow={false}>
+                  <Link
+                    to="/login"
+                    className="text-green-600 px-3 py-1 rounded-md text-sm font-medium relative group"
+                  >
+                    Login
+                  </Link>
+                </MagneticButton>
+                <MagneticButton color="#EF4444" showArrow={false}>
+                  <Link
+                    to="/register"
+                    className="text-red-700 px-3 py-1 rounded-md text-sm font-medium relative group"
+                  >
+                    Signup
+                  </Link>
+                </MagneticButton>
+              </>
+            )}
+          </div> 
         </div>
 
         {/* Mobile Nav */}
@@ -161,18 +170,34 @@ const Navbar = () => {
               </Link>
 
             {/* Mobile Buttons */}
-            {/* <Link
-              to="/login"
-              className="block text-green-600  px-3 py-2 rounded-md text-base font-medium"
-            >
-              Login
-            </Link>
-            <Link
-              to="/register"
-              className="block text-red-700  px-3 py-2 rounded-md text-base font-medium"
-            >
-              Signup
-            </Link> */}
+            {user ? (
+              <>
+                                 <span className="block text-gray-300 px-3 py-2 text-base font-medium">
+                   Welcome, {user.username}
+                 </span>
+                <button
+                  onClick={logout}
+                  className="block text-red-700 px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  className="block text-green-600 px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="block text-red-700 px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Signup
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

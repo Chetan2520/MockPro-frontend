@@ -19,6 +19,7 @@ import ScheduleInterviewForm from "./Component/ScheduleInterviewForm";
 import SchedulePage from "./Component/SchedulePage";
 import PastInterview from "./Component/PastInterview";
 import Dash from "./pages/Dash";
+import ProtectedRoute from "./components/ProtectedRoute";
 const App = () => {
   return (
     <div className="min-h-screen bg-black">
@@ -26,28 +27,30 @@ const App = () => {
         <Route
           path="/"
           element={
-            <>
-              <main>
-                <Navbar />
-                {/* <Dashboard /> */}
-                <Hero />
-                <Features />
-                <HowItWorks />
-                <TechStack />
-                <WhyChooseUs />
-                <BecomeInterviewer />
-                <FAQ />
-                <Testimonials />
-              </main>
-              <Footer />
-            </>
+            <ProtectedRoute>
+              <>
+                <main>
+                  <Navbar />
+                  {/* <Dashboard /> */}
+                  <Hero />
+                  <Features />
+                  <HowItWorks />
+                  <TechStack />
+                  <WhyChooseUs />
+                  <BecomeInterviewer />
+                  <FAQ />
+                  <Testimonials />
+                </main>
+                <Footer />
+              </>
+            </ProtectedRoute>
           }
         />
-        <Route path="/interview" element={<Agent2 />} />
-        <Route path="/form" element={<ScheduleInterviewForm/>} />     
-        <Route path="/dashboard" element={<Dash/>} />     
+        <Route path="/interview" element={<ProtectedRoute><Agent2 /></ProtectedRoute>} />
+        <Route path="/form" element={<ProtectedRoute><ScheduleInterviewForm/></ProtectedRoute>} />     
+        <Route path="/dashboard" element={<ProtectedRoute><Dash/></ProtectedRoute>} />     
           
-        <Route path="/past-interviews" element={<PastInterview/>} />        
+        <Route path="/past-interviews" element={<ProtectedRoute><PastInterview/></ProtectedRoute>} />        
         <Route path="/register" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>
